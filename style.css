@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-dark-1: #0f172a;
+    /* Night Blue */
+    --bg-dark-2: #1e293b;
+    /* Charcoal */
+    --accent-color: #38bdf8;
+    /* Sky Blue */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 50% 10%, var(--bg-dark-2), var(--bg-dark-1));
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    perspective: 1000px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lexend', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Background Effects */
+.background-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: float-orb 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: #4f46e5;
+}
+
+.orb-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: #0ea5e9;
+    animation-delay: -5s;
+}
+
+@keyframes float-orb {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(30px, 50px);
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+header img {
+    height: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+    animation: float-y 6s ease-in-out infinite;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Bento Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+/* Glass Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 30px;
+    color: var(--text-primary);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transform-style: preserve-3d;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Content */
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.grad-text-1 {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-text-2 {
+    background: linear-gradient(45deg, #10b981, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-text-3 {
+    background: linear-gradient(45deg, #f43f5e, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.glass-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.card-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes float-y {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
