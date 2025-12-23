@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const midX = rect.width / 2;
             const midY = rect.height / 2;
 
-            // Reduced intensity from 5 to 1.5 for a subtle premium feel
-            const rotateX = ((y - midY) / midY) * -1.5;
-            const rotateY = ((x - midX) / midX) * 1.5;
+            // Moderate intensity for balanced feel
+            const rotateX = ((y - midY) / midY) * -2.5;
+            const rotateY = ((x - midX) / midX) * 2.5;
 
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.005)`;
         });
