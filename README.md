@@ -12,7 +12,7 @@ GitHub Pages'in projenizi bir web sitesi olarak tanıması için dosyaların bel
 * **Varlıklar (Assets):** CSS, JS ve Görsel dosyalarınızı klasörleyerek (örn: `/css`, `/js`, `/img`) düzenli tutun.
 * **Dosya Yolları:** Kodunuzdaki dosya yollarının (path) "case-sensitive" (büyük/küçük harf duyarlı) olduğunu unutmayın.
 
-<img src="./MEDIA/1.png" width="100%" alt="Dosya Yapısı">
+<img src="./media/1.png" width="100%" alt="Dosya Yapısı">
 ---
 
 ## ⚙️ 2. GitHub Pages Servisini Aktif Etme
@@ -22,7 +22,7 @@ Dosyalarınız hazırsa, yayın sürecini başlatmak için şu adımları izleyi
 ### Adım A: Settings Menüsüne Giriş
 Deponuzun üst panelinde bulunan **Settings** sekmesine tıklayın. Ardından sol menüdeki "Code and automation" bölümünden **Pages** seçeneğine gidin.
 
-<img src="./MEDIA/2.png" width="100%" alt="Dosya Yapısı">
+<img src="./media/2.png" width="100%" alt="Dosya Yapısı">
 
 
 ### Adım B: Branch ve Klasör Seçimi
@@ -31,7 +31,7 @@ GitHub Pages'in hangi koddaki veriyi yayınlayacağını seçmeniz gerekir:
 2. **Branch** açılır menüsünden `main` (veya `master`) dalını seçin.
 3. Klasör olarak `/(root)` seçeneğini belirleyin ve **Save** butonuna tıklayın.
 
-<img src="./MEDIA/3.png" width="100%" alt="Dosya Yapısı">
+<img src="./media/3.png" width="100%" alt="Dosya Yapısı">
 
 
 ---
@@ -44,7 +44,7 @@ Save butonuna bastıktan sonra GitHub arka planda bir "Action" başlatır.
 2. İşlem tamamlandığında (yeşil tik olduğunda), **Settings > Pages** ekranına geri dönün.
 3. En üstte **"Your site is live at..."** ibaresini göreceksiniz.
 
-<img src="./MEDIA/4.png" width="100%" alt="Dosya Yapısı">
+<img src="./media/4.png" width="100%" alt="Dosya Yapısı">
 
 
 ---
